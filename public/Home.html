@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<script src="bootstrap.min.js"></script>
+<script src="jquery-1.12.1.js"></script>
+<link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="BenclytonWatches.css" rel="stylesheet" type="text/css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+body{
+	/*background-image:url(finalbgblur.jpg);
+	background-repeat:no-repeat}	*/}
+.imagecontainer{
+	position: absolute;
+	display: block;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border-radius: 28px;
+	transform: rotate(45deg);
+	left: -129px;
+	top: -29px;
+}
+
+</style>
+</head>
+<body >
+
+<div class="container-fluid" style="background-color:#008CBA">  
+<div class="header">
+<center>
+    <a href="Home.html" class="button button1"><strong>Home</strong></a>
+    <a href="AboutUs.html" class="button button2"><strong>About Us</strong></a>
+    <a href="Brands.html" class="button button3"><strong>Brands</strong></a>
+    <a href="Accessories.html" class="button button4"><strong>Accesories</strong></a>
+    <a href="Gallery.html" class="button button5"><strong>Gallery</strong></a>
+    <a href="Our Clients.html" class="button button6"><strong>Our Client</strong></a>
+    <a href="Contact Us.html" class="button button7"><strong>Contact Us</strong></a>
+    <a href="Sale.html" class="button button7"><strong>SALE</strong></a>
+    <!-- <button class="button">Button</button> -->
+    </center>
+</div></div>
+
+<!-- Diamond Shape ->
+<div style="position: absolute; left: 290px; top: 256px; opacity:0.7">
+<img src="Air_Force_Blue.png" class="imagecontainer" width="165" height="149"/>
+</div>
+<div style="position: absolute; left: 405px; top: 361px; opacity:0.7">
+<img src="Blue.png" class="imagecontainer" width="165" height="165"/>
+</div>
+<div style="position: absolute; left: 520px; top: 256px; opacity:0.7">
+<img src="Air_Force_Blue.png" class="imagecontainer" width="165" height="149"/>
+</div>
+<div style="position: absolute; left: 635px; top: 361px; opacity:0.7">
+<img src="Blue.png" class="imagecontainer" width="165" height="149"/>
+</div>
+<div style="position: absolute; left: 290px; top: 469px; opacity:0.7">
+<img src="Air_Force_Blue.png" class="imagecontainer" width="165" height="149"/>
+</div>
+<div style="position: absolute; left: 520px; top: 469px; opacity:0.7">
+<img src="Air_Force_Blue.png" class="imagecontainer" width="165" height="149"/>
+</div>
+-->
+<!-- button-Left    font-weight:bolder;-->
+<div class="container">
+<div style="position: absolute;  left: 1280px; top: 65px; width: 70px; height: 82%; background-color: #000; border:none">
+  <input value=">" type="button" onclick="backward()"      
+    style="float:left; height: 100%; width: 100%; font-style:oblique;  font-size:36px; background-color:transparent"/>
+</div>
+
+<!-- Center Part -->
+<div style="position: absolute; top: 65px; width: 90%; height: 82%; left: 72px;">
+<img style=" width:100%; height:100%;  border:none" id="img" alt="Images" src="Pic1.jpg"/>
+</div>
+
+<!-- button-Right -->
+<div style="position: absolute; left: 2px; top: 65px; width: 75px; height: 82%; background-color: #000;">
+<input value="<" type="button" onclick="forward()"
+ style=" position: absolute; float: right; height: 100%; width: 100%; font-weight: bolder; font-size:36px; left: -2px; top: -1px;background-color: transparent; "/>
+</div>
+<script  type="text/javascript">
+    var counter = 1;
+    function forward()
+	 {
+       if ((counter >= 1) && (counter < 10)) 
+		{
+            counter++;
+            document.getElementById("img").src = "Pic" + counter + ".jpg";
+             setTimeout("forward()",3000);
+        }
+		else
+		{
+		counter =1;
+		forward();
+		}
+     }
+//counter=1;
+//setTimeout("forward()",1500);
+    function backward() {
+        if ((counter > 1) && (counter <= 10))
+		{
+            counter--;
+            document.getElementById("img").src = "Pic" + counter + ".jpg";
+		setTimeout("forward()",5000);
+        }
+    }
+</script>
+
+</div>
+
+
+<div class="container">
+<div class="panel-footer navbar-fixed-bottom" style="background-color:#008CBA;position: absolute; width:100%; ">
+<center><h3><strong>Benclayton</strong><br> &copy; 2015, Allrights reserved</h3></center>
+</div></div>
+
+</body>
+</html>

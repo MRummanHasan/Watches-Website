@@ -1,0 +1,46 @@
+<!-- button-Left    font-weight:bolder;-->
+<div style="position: absolute;  left: 1369px; top: 65px; width: 75px; height: 90%; background-color: #000;">
+  <input value=">" type="button" onclick="backward()"      
+    style="float:left; height: 100%; width: 100%; font-style:oblique;  font-size:36px; background-color:transparent"/>
+</div>
+
+
+<!-- Center Part -->
+<div style="position: absolute; top: 65px; width: 90%; height: 90%; left: 75px;">
+<img style=" width:100%; height:100%; border-style:double; border-color:yellow" id="img" src="Pic1.jpg"/>
+</div>
+
+
+<!-- button-Right -->
+<div style="position: absolute; left: 0px; top: 65px; width: 75px; height: 90%; background-color: #000;">
+<input value="<" type="button" onclick="forward()"
+ style=" position: absolute; float: right; height: 100%; width: 100%; font-weight: bolder; font-size:36px; left: -2px; top: -1px;background-color: transparent; "/>
+</div>
+
+
+<script  type="text/javascript">
+    var counter = 1;
+    function forward()
+	 {
+       if ((counter >= 1) && (counter < 10)) 
+		{
+            counter++;
+            document.getElementById("img").src = "Pic" + counter + ".jpg";
+             setTimeout("forward()",1500);
+        }else
+		{
+		counter =1;
+		forward();
+		}
+     }
+//counter=1;
+//setTimeout("forward()",1500);
+    function backward() {
+        if ((counter > 1) && (counter <= 10))
+		{
+            counter--;
+            document.getElementById("img").src = "Pic" + counter + ".jpg";
+ //setTimeout("forward()",1500);
+        }
+    }
+</script>
